@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +23,7 @@ namespace Lesson1
         public int getB() => b;
         public void Print()=> Console.WriteLine("a"+a+"b="+b);
         public void setA(int a) => this.a = a;
-        public void serB(int b) => this.b = b;
+        public void setB(int b) => this.b = b;
         public int Sum() => a+b;
         public int Max()
         {
