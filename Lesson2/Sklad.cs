@@ -39,7 +39,7 @@ namespace Lesson2
             Number = number;
             LastName = lastName;
             MaxVolume = maxVolume;
-            Current = current;
+            Current = 0;
         }
         public void AddMaterials(double volume)
         {

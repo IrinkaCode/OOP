@@ -45,13 +45,28 @@
 
 using Lesson2;
 
+//Console.Write("Введите номер склада: ");
+//int number = int.Parse(Console.ReadLine()!);
+
+//Console.Write("Введите фамилию директора: ");
+//string lastName = Console.ReadLine()!;
+
+//Console.Write("Введите максимальный обьем хранимых пиломатериалов: ");
+//double maxVolume = double.Parse(Console.ReadLine()!);
+
 //Console.Write("Введите количество ввезенного материала: ");
 //double addMaterial = double.Parse(Console.ReadLine()!);
 
 //Console.Write("Введите количество вывезенного материала: ");
 //double removeMaterial = double.Parse(Console.ReadLine()!);
 
-Sklad sklad = new Sklad(1, "Иванов", 1000.0, 0);
+//Console.Write("Введите текущий обьем: ");
+//double current = double.Parse(Console.ReadLine()!);
+
+//Sklad sklad = new Sklad(number, lastName, maxVolume, current);
+//sklad.DisplayInfo();
+
+Sklad sklad = new Sklad(1, "Иванов", 1000, 100);
 sklad.AddMaterials(500.0);
 sklad.RemoveMaterials(200.0);
 sklad.DisplayInfo();
