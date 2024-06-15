@@ -10,7 +10,7 @@ namespace Lesson2
     {
         private int number;//номер склада
         private string lastName;//фамилия директора
-        private double maxVolume;//максимамальный обьем материалов
+        private double maxVolume;//максимальный обьем материалов
         private double current;//текущий обьем материалов
 
         public int Number
@@ -26,58 +26,43 @@ namespace Lesson2
         public double MaxVolume
         {
             get { return maxVolume; }
-            set { maxVolume = value; }
+            set
+            {
+                if (value > 0) maxVolume = value;
+                else throw new Exception("Введите правильный обьем");
+            }
         }
         public double Current
         {
-            get { return current; } 
-            set { current = value; }
-        }
-
-        public Sklad(int number, string lastName, double maxVolume, double current)
-        {
-            Number = number;
-            LastName = lastName;
-            MaxVolume = maxVolume;
-            Current = 0;
+            get { return current; }
+            set
+            {
+                if (value > maxVolume - current)
+                {
+                    current = maxVolume;
+                    Console.WriteLine("Склад перегружен");
+                }
+                else if (current + value < 0)
+                {
+                    Console.WriteLine("Недостаток на складе!!!");
+                }
+                else current += value;
+            }
         }
         public void AddMaterials(double volume)
         {
-            if (current + volume <= maxVolume)
-            {
-                current += volume;
-                Console.WriteLine($"На склад №{number} под управлением {lastName} завезено {volume} м3 пиломатериалов.");
-            }
-            else
-            {
-                Console.WriteLine($"Невозможно завезти {volume} м3 пиломатериалов на склад №{number} под управлением {lastName}. Превышен максимальный объем.");
-            }
+            Current = volume;
         }
 
         // Вывезенные материалы, м3
         public void RemoveMaterials(double volume)
         {
-            if (current - volume >= 0)
-            {
-                current -= volume;
-                Console.WriteLine($"Со склада №{number} под управлением {lastName} вывезено {volume} м3 пиломатериалов.");
-            }
-            else
-            {
-                Console.WriteLine($"Невозможно вывезти {volume} м3 пиломатериалов со склада №{number} под управлением {lastName}. Недостаточно материалов.");
-            }
+            Current = -volume;
         }
-
-        // Выдача сообщения, сколько можно еще завезти материалов и сколько есть в наличии
-        public void DisplayInfo()
+        public void Print()
         {
-            double freeVolume = maxVolume - current;
-            Console.WriteLine($"На складе №{number} под управлением {lastName}:");
-            Console.WriteLine($"Максимальный объем: {maxVolume} м3");
-            Console.WriteLine($"Текущий объем: {current} м3");
-            Console.WriteLine($"Свободный объем: {freeVolume} м3");
+            Console.WriteLine($"Можно завести {maxVolume - current:F2}. В Наличии {current}");
         }
-
 
     }
 

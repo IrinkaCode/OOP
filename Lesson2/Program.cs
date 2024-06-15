@@ -66,7 +66,9 @@ using Lesson2;
 //Sklad sklad = new Sklad(number, lastName, maxVolume, current);
 //sklad.DisplayInfo();
 
-Sklad sklad = new Sklad(1, "Иванов", 1000, 100);
-sklad.AddMaterials(500.0);
-sklad.RemoveMaterials(200.0);
-sklad.DisplayInfo();
+Sklad sklad1 = new Sklad() { Number = 1, LastName = "Иванов", MaxVolume = 500, Current = 100 };
+Sklad sklad2 = new Sklad() { Number = 2, LastName = "Петров", MaxVolume = 800, Current = 100 }; 
+sklad1.AddMaterials(120.0);
+sklad1.Print();
+sklad1.RemoveMaterials(200.0);
+sklad1.Print();
