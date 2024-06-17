@@ -42,7 +42,7 @@ public class Triangle
     public (double, double) MedianIntersection()
     {
         double x = (_a * _a * (_b + _c - _a) + _b * _b * (_a + _c - _b) + _c * _c * (_a + _b - _c)) / (2 * (_a + _b + _c));
-        double y = Math.Sqrt(_a * _a - (x - _a) * (x - _a));
+        double y = (_a * _a - (x - _a) * (x - _a));
         return (x, y);
     }
 }

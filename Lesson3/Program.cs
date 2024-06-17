@@ -18,6 +18,7 @@ user["name"] = "Иванов И.И.";
 user["email"] = "mail@inbox.ru";
 user["phone"] = "+7(952)-114-17-24";
 
+
 Console.WriteLine(user["name"] + " " + user["email"] + " " + user["phone"]);
 
 Random random = new Random();
