@@ -10,71 +10,52 @@ namespace Lesson4_DZ_
     internal class StringArray
     {
      
-        private string[] massiv1;
-        private string[] massiv2;
-        private int lenght;
-
-        public StringArray(int lengh)
+        private string[] mas;
+        public StringArray(int n)
         {
-            lenght = lengh;
-            massiv1 = new string[lengh];
-            massiv2 = new string[lengh];
+            this.mas = new string[n];
         }
+
         public string this[int index]
         {
             get
             {
-                if (index < 0 || index >= lenght)
-                {
-                    throw new IndexOutOfRangeException("Массив больше заданной длины");
-                }
-                return massiv1[index];
+                if (index >= 0 && index < mas.Length)
+                    return mas[index];
+                else throw new ArgumentOutOfRangeException();
             }
-
             set
             {
-                if (index < 0 || index >= lenght)
-                {
-                    throw new ArgumentOutOfRangeException("Массив больше заданной длины");
-                }
-                massiv1[index] = value;
+                if (index >= 0 && index < mas.Length)
+                    mas[index] = value;
             }
+        }
+        public string[] Concat(string[] source)
+        {
+            string[] res = new string[mas.Length];
+            for (int i = 0; i < mas.Length; i++)
+            {
+                res[i] = mas[i] + source[i];
+            }
+            return res;
+        }
+        public string[] Union(string[] source)
+        {
+            string[] res = new string[mas.Length];
+            ///
+            return res;
+        }
+        public void Print()
+        {
+            ///
+        }
+    }
+        {
 
         }
-        public string GetSecondArrayElement(int index)
-        {
-            if (index < 0 || index >= lenght)
-            {
-                throw new IndexOutOfRangeException("Индекс находится за пределами массива");
-            }
-            return massiv2[index];
-        }
 
-        public void SetSecondArrayElement(int index, string value)
-        {
-            if (index < 0 || index >= lenght)
-            {
-                throw new ArgumentOutOfRangeException("Индекс находится за пределами массива");
-            }
-            massiv2[index] = value;
-        }
-        public void Sum()
-        {
-            for (int i = 0; i < lenght; i++)
-            {
-                Console.WriteLine($"Сумма элементов под индексом {i}: {massiv1[i] + massiv2[i]}");
-            }
-        }
-        public string Contac()
-        {
-            string result = "";
-            foreach (string str in massiv1)
-            {
-                result += str;
-            }
-            return result;
-        }
 
+       
     }
 
 }
