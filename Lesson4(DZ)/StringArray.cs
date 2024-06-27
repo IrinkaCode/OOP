@@ -9,7 +9,7 @@ namespace Lesson4_DZ_
 {
     internal class StringArray
     {
-     
+
         private string[] mas;
         public StringArray(int n)
         {
@@ -41,24 +41,44 @@ namespace Lesson4_DZ_
         }
         public string[] Union(string[] source)
         {
-            string[] res = new string[mas.Length];
-            ///
-            return res;
+            List<string> resultList = new List<string>(mas);
+            foreach (string s in source)
+            {
+                if (!resultList.Contains(s))
+                {
+                    resultList.Add(s);
+                }
+            }
+            return resultList.ToArray();
         }
-        public void Print()
+        public void PrintElement(int index)
         {
-            ///
+            if (index >= 0 && index < mas.Length)
+            {
+                Console.WriteLine(mas[index]);
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+        }
+        public void PrintAll()
+        {
+            foreach (string s in mas)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
-        {
+}
 
-        }
+        
 
 
        
-    }
+    
 
-}
+
 
     
 
