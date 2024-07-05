@@ -4,8 +4,8 @@ using Lesson11_DZ_;
 
 Avto avto1 = new Avto { Model = "Toyota", Year = 2020 };
 Avto avto2 = new Avto { Model = "Honda", Year = 2018 };
-Driver driver1 = new Driver { Name = "John Smith" };
-Driver driver2 = new Driver { Name = "Jane Broun" };
+Driver driver1 = new Driver { Name = "Иван Иванов" };
+Driver driver2 = new Driver { Name = "Петр Петров" };
 
 Dispatcher dispatcher = new Dispatcher();
 dispatcher.AddCar(avto1);
