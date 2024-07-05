@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lesson10_DZ_
 {
-    public class DerivedClass
+    public class DerivedClass:NumberClass
     {
         // Второе открытое целочисленное поле
         public int AnotherValue;
 
         // Переопределенный индексатор с двумя индексами
-        public override int this[int field, int index]
+        public  int this[int field,int index]
         {
             get
             {
@@ -22,7 +22,7 @@ namespace Lesson10_DZ_
         }
 
         // Переопределенный индексатор с одним индексом
-        public override int this[int index]
+        public int this[int index]
         {
             get
             {
