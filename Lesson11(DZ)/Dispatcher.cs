@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson11_DZ_
 {
-    internal class Dispatcher
+    public class Dispatcher
     {
         private List<Avto> avtos = new List<Avto>();
         private List<Driver> drivers = new List<Driver>();

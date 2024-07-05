@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson11_DZ_
 {
-    internal class Avto
+    public class Avto
     {
         public string Model { get; set; }
         public int Year { get; set; }

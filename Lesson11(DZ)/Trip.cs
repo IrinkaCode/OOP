@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson11_DZ_
 {
-    internal class Trip
+    public class Trip
     {
         public Avto AssignedAvto { get; set; }
         public Driver AssignedDriver { get; set; }

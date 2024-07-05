@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson11_DZ_
 {
-    internal class Driver
+    public class Driver
     {
         public string Name { get; set; }
         public bool IsWorking { get; set; } = true;
