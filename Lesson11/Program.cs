@@ -48,7 +48,32 @@ using System.Net.Sockets;
 //}
 //Console.WriteLine();
 
-// дописать из гита
+//for (int i = 0; i < masDouble.Length; i++)
+//{
+//    masDouble[i] = rnd.NextDouble()*10;
+//    Console.Write(masDouble[i].ToString("F2") + " ");
+//}
+//Console.WriteLine();
+//ReverseMas<double>(masDouble);
+//for (int i = 0; i < masDouble.Length; i++)
+//{
+//    Console.Write(masDouble[i].ToString("F2") + " ");
+//}
+//Console.WriteLine();
+
+//for (int i = 0; i < masString.Length; i++)
+//{
+//    masString[i] = ((char)rnd.Next(1024,2000)).ToString();
+//    Console.Write(masString[i] + " ");
+//}
+//Console.WriteLine();
+//ReverseMas<string>(masString);
+//for (int i = 0; i < masString.Length; i++)
+//{
+//    Console.Write(masString[i] + " ");
+//}
+//Console.WriteLine();
+
 
 
 ////3
@@ -76,12 +101,38 @@ using System.Net.Sockets;
 
 Teacher<string, string, string> teacher = new Teacher<string, string, string>
 {
-    Address="ihgugfy",
-        Age=40,
-        EyesColor="uyfutfu",
-        Gender = "kjhgj",
-        Id=1,
-        Name="Bdfy",
-        Rost=190,
+    Address = "qqqqq",
+    Age = 40,
+    EyesColor = "Green",
+    Gender = "Male",
+    Height = 90,
+    Id = 1,
+    Name = "Василий",
+    Phone = "+790067884534",
+    Posision = "Учитель",
+    Rassa = "Европа",
+    Rost = 190,
+    Selary = 45000,
+    Stage = 10,
+    Subject = "Физика",
+    WorkStart = new DateTime(2000, 12, 3)
 };
-enum Gender { Men, Female }                       ////дописать
+Teacher<Gender, string, string> teacher2 = new Teacher<Gender, string, string>
+{
+    Address = "qqqqq",
+    Age = 40,
+    EyesColor = "Green",
+    Gender = Gender.Man,
+    Height = 90,
+    Id = 1,
+    Name = "Василий",
+    Phone = "+790067884534",
+    Posision = "Учитель",
+    Rassa = "Европа",
+    Rost = 190,
+    Selary = 45000,
+    Stage = 10,
+    Subject = "Физика",
+    WorkStart = new DateTime(2000, 12, 3)
+};
+enum Gender { Man, Female }                      
