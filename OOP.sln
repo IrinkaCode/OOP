@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson11(DZ)", "Lesson11(DZ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson11", "Lesson11\Lesson11.csproj", "{35932F76-9770-4C59-A16A-8D045C542EB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson12(DZ) Перегрузка операций", "Lesson12(DZ) Перегрузка операций\Lesson12(DZ) Перегрузка операций.csproj", "{DCCDC347-FE03-4018-8F71-11C3BA82812D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson12(DZ) Перегрузка операций", "Lesson12(DZ) Перегрузка операций\Lesson12(DZ) Перегрузка операций.csproj", "{DCCDC347-FE03-4018-8F71-11C3BA82812D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson13(DZ) Абстрактные классы", "Lesson13(DZ) Абстрактные классы\Lesson13(DZ) Абстрактные классы.csproj", "{EF3C383C-66FB-426E-83BB-C54D51E764D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{DCCDC347-FE03-4018-8F71-11C3BA82812D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCCDC347-FE03-4018-8F71-11C3BA82812D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCCDC347-FE03-4018-8F71-11C3BA82812D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3C383C-66FB-426E-83BB-C54D51E764D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3C383C-66FB-426E-83BB-C54D51E764D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3C383C-66FB-426E-83BB-C54D51E764D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3C383C-66FB-426E-83BB-C54D51E764D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
