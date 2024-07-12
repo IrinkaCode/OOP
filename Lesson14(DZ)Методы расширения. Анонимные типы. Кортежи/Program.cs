@@ -18,8 +18,7 @@ Student[] students = new Student[10]
 
 };
 
-Array.Sort(students,
-           (s1, s2) => s1.AverageGrade.CompareTo(s2.AverageGrade));
+Array.Sort(students,(s1, s2) => s1.AverageGrade.CompareTo(s2.AverageGrade));
 
 Console.WriteLine("Студенты с оценками только равными 4 или 5:");
 
