@@ -222,25 +222,63 @@
 
 using System.ComponentModel;
 using System.IO;
+using System.Security.Claims;
 
-Dictionary<string, int> errors = new Dictionary<string, int>();
-using (StreamReader reader = new StreamReader("Log.txt"))
+//Dictionary<string, int> errors = new Dictionary<string, int>();
+//using (StreamReader reader = new StreamReader("Log.txt"))
+//{
+//    string? line;
+//    while ((line = await reader.ReadLineAsync()) != null)
+//    {
+//        string[] mas = line.Split("Ошибка:");
+//        if (!errors.ContainsKey(mas[1]))
+//        {
+//            errors.Add(mas[1], 1);
+//        }
+//        else
+//        {
+//            int value;
+//            errors.TryGetValue(mas[1], out value);
+//            errors[mas[1]] = ++value;
+//        }
+//    }
+//    foreach (KeyValuePair<string, int> kvp in errors)
+//        Console.WriteLine(kvp.Key + " " + kvp.Value);
+//}
+
+//8. Календарь событий:
+
+List<Class> taskList = new List<Class>();
+while (true)
 {
-    string? line;
-    while ((line = await reader.ReadLineAsync()) != null)
+    Console.Clear();
+    Console.WriteLine("Меню:\n" +
+        "1 - Добавить событие\n" +
+        "2 - Удалить событие\n" +
+        "Список событий:");
+    int count = 0;
+    taskList.ForEach(task => Console.WriteLine(++count + "." + task.TaskName));
+    Console.Write("Выберите пункт меню:");
+    int n;
+    int.TryParse(Console.ReadLine(), out n);
+    switch (n)
     {
-        string[] mas = line.Split("Ошибка:");
-        if (!errors.ContainsKey(mas[1]))
-        {
-            errors.Add(mas[1], 1);
-        }
-        else
-        {
-            int value;
-            errors.TryGetValue(mas[1], out value);
-            errors[mas[1]] = ++value;
-        }
+        case 1:
+            {
+                Console.Write("Введите название события:");
+                string name = Console.ReadLine()!;
+
+                taskList.Add(new Class { TaskName = name });
+            }
+            break;
+        case 2:
+            {
+                Console.Write("Введите номер события:");
+                int ClassNumber;
+                int.TryParse(Console.ReadLine(), out ClassNumber);
+                taskList.RemoveAt(ClassNumber - 1);
+                Console.WriteLine("Событие " + taskList[ClassNumber - 1].TaskName + " удалена");
+            }
+            break;
     }
-    foreach (KeyValuePair<string, int> kvp in errors)
-        Console.WriteLine(kvp.Key + " " + kvp.Value);
 }
