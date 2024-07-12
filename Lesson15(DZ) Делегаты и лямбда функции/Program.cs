@@ -9,3 +9,45 @@
 //Определите делегат с сигнатурой для метода CalculateVolume.
 //Создайте метод, который принимает массив зданий и делегат, а затем вызывает метод CalculateVolume для каждого здания в массиве с помощью делегата. Выведите результаты расчетов на экран.
 
+using Lesson15_DZ__Делегаты_и_лямбда_функции;
+
+Building[] buildings = new Building[]
+{
+    new Building
+    {
+        BuildingName = "Небоскреб",
+        Height = 200.0,
+        Floors = 50,
+        TotalArea = 10000.0,
+        Location = "Центр города"
+    },
+    new Building
+    {
+        BuildingName = "Офисное здание",
+        Height = 50.0,
+        Floors = 12,
+        TotalArea = 2500.0,
+        Location = "Деловой район"
+    },
+    new Building
+    {
+        BuildingName = "Жилой дом",
+        Height = 30.0,
+        Floors = 9,
+        TotalArea = 1800.0,
+        Location = "Жилой квартал"
+    }
+};
+
+// Вызываем метод CalculateAndDisplayVolumes с использованием делегата
+CalculateAndDisplayVolumes(buildings, building => building.CalculateVolume());
+static void CalculateAndDisplayVolumes(Building[] buildings, VolumeCalculator volumeCalculator)
+{
+    foreach (var building in buildings)
+    {
+        double volume = volumeCalculator(building);
+        Console.WriteLine($"Объем здания '{building.BuildingName}': {volume} кубических метров");
+    }
+}
+
+
