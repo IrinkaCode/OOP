@@ -3,6 +3,11 @@
 using System.Collections.Generic;
 
 int[] numbers = new int[] { -5, 2, -8, 7, 0, -3, 9, -1, 4, -6 };
+foreach (int num in numbers)
+{
+    Console.Write(num+ ",");
+}
+Console.WriteLine();
 
 //2. Списки (List): Создайте список строк и добавьте в него несколько элементов произвольных имен.
 
@@ -14,6 +19,11 @@ List<string> names = new List<string>
     "Елена",
     "Олег"
 };
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+Console.WriteLine();
 
 //3.Инициализация стека целых чисел и добавление нескольких элементов:
 
@@ -45,6 +55,11 @@ Queue<string> stringQueue = new Queue<string>();
 stringQueue.Enqueue("Яблоко");
 stringQueue.Enqueue("Груша");
 stringQueue.Enqueue("Апельсин");
+foreach (string num in stringQueue)
+{
+    Console.WriteLine(num);
+}
+Console.WriteLine();
 
 //6.Создание словаря, связывающего строки с целыми числами:
 
