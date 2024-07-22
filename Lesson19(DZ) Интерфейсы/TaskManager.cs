@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lesson12_Интерфейсы
+namespace Lesson19_DZ__Интерфейсы
 {
     internal class TaskManager
     {
@@ -58,5 +58,4 @@ namespace Lesson12_Интерфейсы
             }
         }
     }
-
 }
