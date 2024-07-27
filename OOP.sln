@@ -73,11 +73,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson19(DZ) Интерфе
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson19-2(DZ)", "Lesson19-2(DZ)\Lesson19-2(DZ).csproj", "{D1885ABE-B98C-4C6B-9C32-7E5942DE3CAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson15 События", "Lesson15 События\Lesson15 События.csproj", "{2BCDB611-3919-498B-80BF-857546A68694}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson15 События", "Lesson15 События\Lesson15 События.csproj", "{2BCDB611-3919-498B-80BF-857546A68694}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson15-1", "Lesson15-1\Lesson15-1.csproj", "{F7C7FA9C-B4F4-4FCF-81A4-BDE06BEB5E00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson15-1", "Lesson15-1\Lesson15-1.csproj", "{F7C7FA9C-B4F4-4FCF-81A4-BDE06BEB5E00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson 15-2 JSON", "Lesson 15-2 JSON\Lesson 15-2 JSON.csproj", "{A5F1E33F-CB0C-4ABB-BE88-E1CE8F8C6BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson 15-2 JSON", "Lesson 15-2 JSON\Lesson 15-2 JSON.csproj", "{A5F1E33F-CB0C-4ABB-BE88-E1CE8F8C6BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson16.Console", "Lesson16.Console\Lesson16.Console.csproj", "{5D869D05-57B7-4352-B3D0-51A656632946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson16 DeskTop", "Lesson16 DeskTop\Lesson16 DeskTop.csproj", "{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +241,14 @@ Global
 		{A5F1E33F-CB0C-4ABB-BE88-E1CE8F8C6BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F1E33F-CB0C-4ABB-BE88-E1CE8F8C6BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F1E33F-CB0C-4ABB-BE88-E1CE8F8C6BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D869D05-57B7-4352-B3D0-51A656632946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D869D05-57B7-4352-B3D0-51A656632946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D869D05-57B7-4352-B3D0-51A656632946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D869D05-57B7-4352-B3D0-51A656632946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
