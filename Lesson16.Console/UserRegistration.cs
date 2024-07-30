@@ -10,7 +10,7 @@ namespace Lesson16.Console
     public class UserRegistration
     {
         private List<User>? users;
-        private const string path = "C:\\Users\\pil02\\share";
+        private const string path = "C:\\Users\\pil02\\share\\users.json"; //"C:\\Share\\users.json"; 
 
         public UserRegistration()
         {
@@ -24,7 +24,7 @@ namespace Lesson16.Console
                 try
                 {
                     List<User>? userList = await JsonSerializer.DeserializeAsync<List<User>>(fs);
-                    users=userList;
+                    users = userList;
                 }
                 catch { }
             }
@@ -32,27 +32,27 @@ namespace Lesson16.Console
         public bool RegisterUser(User user)
         {
             User realUser = users!.FirstOrDefault(p => p.UserName == user.UserName && p.Email == user.Email)!;
-
             if (realUser != null)
             {
                 return false;
             }
             else
             {
-                user.Id = users!.Count+1;
+                user.Id = users!.Count + 1;
                 users.Add(user);
                 SerializeUsersToJson(users, path);
                 return true;
             }
         }
-        public bool AuthenticateUser(string username,string password)
+        public bool AuthenticateUser(string username, string password)
         {
-            User realUser = users!.FirstOrDefault(p=>p.UserName == username && p.Password == password)!;
-
+            User realUser = users!.FirstOrDefault(p => p.UserName == username && p.Password == password)!;
+            if (realUser != null) return true;
+            return false;
         }
         private async void SerializeUsersToJson(List<User> users, string fileName)
         {
-           using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 await JsonSerializer.SerializeAsync(fs, users);
             }
@@ -62,7 +62,7 @@ namespace Lesson16.Console
             string res = "";
             foreach (User user in users!)
             {
-                res+=user.Id+" "+user.FirstName+" "+user.Email+"\n";
+                res += user.Id + " " + user.FirstName + " " + user.Email + "\n";
             };
             return res;
         }

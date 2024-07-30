@@ -79,9 +79,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson15-1", "Lesson15-1\Le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson 15-2 JSON", "Lesson 15-2 JSON\Lesson 15-2 JSON.csproj", "{A5F1E33F-CB0C-4ABB-BE88-E1CE8F8C6BB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson16.Console", "Lesson16.Console\Lesson16.Console.csproj", "{5D869D05-57B7-4352-B3D0-51A656632946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson16.Console", "Lesson16.Console\Lesson16.Console.csproj", "{5D869D05-57B7-4352-B3D0-51A656632946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson16 DeskTop", "Lesson16 DeskTop\Lesson16 DeskTop.csproj", "{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson16 DeskTop", "Lesson16 DeskTop\Lesson16 DeskTop.csproj", "{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson20(DZ)Ограничение обобщений", "Lesson20(DZ)Ограничение обобщений\Lesson20(DZ)Ограничение обобщений.csproj", "{7CFA4BFE-5253-482F-AF3B-4DC2D26EFB21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,10 @@ Global
 		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6EA780A-EF65-49A5-9E1D-CBF1E5BF8D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CFA4BFE-5253-482F-AF3B-4DC2D26EFB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CFA4BFE-5253-482F-AF3B-4DC2D26EFB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CFA4BFE-5253-482F-AF3B-4DC2D26EFB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CFA4BFE-5253-482F-AF3B-4DC2D26EFB21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
