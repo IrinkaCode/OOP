@@ -43,7 +43,7 @@ namespace Lesson20_DZ_Ограничение_обобщений
 
         public T GetConcreteAnimal(int id)
         {
-            return animalList.Find(animal => animal.Id == id);
+            return animalList.Find(animal => animal.Id == id)!;
         }
     }
 

@@ -27,17 +27,15 @@
 
 //Напишите простой код для создания объекта класса Animals<Animal>,добавления нескольких животных в перечень, и вывода списка животных с их параметрами.
 
-// Создаем экземпляр класса Animals<Animal>
 using Lesson20_DZ_Ограничение_обобщений;
 
 Animals<Animal> animals = new Animals<Animal>();
 
-// Добавляем животных в список
 animals.AddAnimal(new Animal(1, "Buddy", "Golden Retriever", DateTime.Now, 3));
 animals.AddAnimal(new Animal(2,"Mittens", "Siamese Cat", DateTime.Now, 2));
 animals.AddAnimal(new Animal(3,"Leo", "Bengal Tiger", DateTime.Now, 5));
 
-// Получаем список всех животных
+//список всех животных
 List <Animal> animalList = animals.GetAnimals();
 
 // Выводим информацию о каждом животном
