@@ -26,6 +26,12 @@ namespace Lesson16.Console
         //}
   
     }
+    public enum UserRole
+    {
+        Admin,
+        Author,
+        Reader
+    }
 
 
 }
