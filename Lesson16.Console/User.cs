@@ -18,20 +18,13 @@ namespace Lesson16.Console
         public string? Password { get; set; }
         public DateTime RegistrationDate { get; set; }
         public DateTime BirthDate { get; set; }
+        public string? Role { get; set; }
 
         //public override string? ToString()
         //{
         //    return $"{Id} {UserName} {FirstName} {SecondName} {Email} " +
         //        $"{Password} Дата регистрации:{RegistrationDate} Дата рождения:{BirthDate}";
         //}
-  
-    }
-    public enum UserRole
-    {
-        Admin,
-        Author,
-        Reader
-    }
 
-
+    }
 }
