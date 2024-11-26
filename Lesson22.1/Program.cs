@@ -26,16 +26,20 @@ Tovar[] mas =
 };
 FileInfo fileInfo = new FileInfo("МагазинМечты.xlsx");
 if (!fileInfo.Exists) fileInfo.Create();
-ExcelPackage.LicenseContext =
-    OfficeOpenXml.LicenseContext.NonCommercial;
+
+ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
 ExcelPackage newBook = new ExcelPackage("МагазинМечты.xlsx");
+
 newBook.Workbook.Worksheets.Add("Складской учет");
-ExcelWorksheet worksheet =
-    newBook.Workbook.Worksheets["Складской учет"];
+
+ExcelWorksheet worksheet = newBook.Workbook.Worksheets["Складской учет"];
+
 worksheet.Cells["A1"].Value = "Наименование";
 worksheet.Cells["B1"].Value = "Тип товара";
 worksheet.Cells["C1"].Value = "Стоимость";
 worksheet.Cells["D1"].Value = "Количество";
+
 for (int i = 0; i < mas.Length; i++)
 {
     worksheet.Cells[2 + i, 1].Value = mas[i].Name;

@@ -39,7 +39,7 @@
 //newBook.Save();
 //newBook.SaveAs(fileInfo);
 
-
+////Второй вариант
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System;
