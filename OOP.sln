@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson23.2", "Lesson23.2\Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema26(DZ) Task", "Tema26(DZ) Task\Tema26(DZ) Task.csproj", "{16D14D7F-06F8-4D61-AEF7-6B443ED2D0FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema26(DZ) Task.Async Await", "Tema26(DZ) Task.Async Await\Tema26(DZ) Task.Async Await.csproj", "{8B9F6AB6-3F81-4580-962A-7C29658BA0DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,10 @@ Global
 		{16D14D7F-06F8-4D61-AEF7-6B443ED2D0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D14D7F-06F8-4D61-AEF7-6B443ED2D0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D14D7F-06F8-4D61-AEF7-6B443ED2D0FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9F6AB6-3F81-4580-962A-7C29658BA0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9F6AB6-3F81-4580-962A-7C29658BA0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9F6AB6-3F81-4580-962A-7C29658BA0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9F6AB6-3F81-4580-962A-7C29658BA0DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
