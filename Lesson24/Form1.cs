@@ -1,3 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 namespace Lesson24
 {
     public partial class Form : System.Windows.Forms.Form
@@ -12,12 +23,11 @@ namespace Lesson24
         {
 
         }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            AddUser(textBoxFirstName.Text, textBoxLastName.Text, int.Parse(textBoxAge.Text));
+            AddUser(textBoxFirstName.Text, textBoxLastName.Text,
+                int.Parse(textBoxAge.Text));
             UpdateList();
-
         }
         private void AddUser(string name, string lastName, int age)
         {
@@ -33,12 +43,9 @@ namespace Lesson24
             textBoxAge.Text = textBoxFirstName.Text = textBoxLastName.Text = "";
             buttonEdit.Enabled = false;
         }
-        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void dataGridViewUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViewUser.SelectedRows.Count > 0)
             {
@@ -54,13 +61,12 @@ namespace Lesson24
         {
             if (dataGridViewUser.SelectedRows.Count > 0)
             {
-                buttonEdit.Enabled = true;
                 int index = dataGridViewUser.SelectedRows[0].Index;
                 users[index].Name = textBoxFirstName.Text;
                 users[index].SurName = textBoxLastName.Text;
                 users[index].Age = int.Parse(textBoxAge.Text);
                 UpdateList();
-                buttonEdit.Enabled = false;
+
             }
         }
 
@@ -73,6 +79,7 @@ namespace Lesson24
                 UpdateList();
             }
         }
+
         private void DeleteItem(int index)
         {
             users.RemoveAt(index);
@@ -82,10 +89,14 @@ namespace Lesson24
         {
             if (e.KeyCode == Keys.Delete)
             {
-                int index = dataGridViewUser.SelectedRows[0].Index;
-                DeleteItem(index);
-                UpdateList();
+                if (dataGridViewUser.SelectedRows.Count > 0)
+                {
+                    int index = dataGridViewUser.SelectedRows[0].Index;
+                    DeleteItem(index);
+                    UpdateList();
+                }
             }
         }
+
     }
 }

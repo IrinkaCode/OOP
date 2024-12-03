@@ -108,6 +108,7 @@
             Margin = new Padding(6);
             Name = "Form1";
             Text = "Урок 24";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
             PerformLayout();
