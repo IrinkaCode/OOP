@@ -67,7 +67,7 @@ do
                 worksheet.Cells[currentRow, 4].Value = tovar.Total;
                 worksheet.Cells[currentRow, 5].Value = tovar.Price;
                 worksheet.Cells[currentRow, 6].Value = tovar.Remainder;
-                worksheet.Cells[currentRow, 7].Value = tovar.Start;
+                worksheet.Cells[currentRow, 7].Value = tovar.Start.ToString();
                 package.Save();
                 currentRow++;
             }
@@ -89,6 +89,11 @@ do
                             Value.ToString()!) - count;
                             worksheet.Cells[row, 2].Value = nCount;
                             package.Save();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Такого количества на складе нет!");
+                            Console.ReadKey();
                         }
                     }
                 }
