@@ -129,6 +129,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson24", "Lesson24\Lesson
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson24.1", "Lesson24.1\Lesson24.1.csproj", "{EBE7F530-BB3E-4D42-B1C9-F64BEA0745A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema27(DZ) TaskManager", "Tema27(DZ) TaskManager\Tema27(DZ) TaskManager.csproj", "{7F35A4CC-EA50-4599-A6F5-D9AE33D560D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -387,6 +389,10 @@ Global
 		{EBE7F530-BB3E-4D42-B1C9-F64BEA0745A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBE7F530-BB3E-4D42-B1C9-F64BEA0745A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBE7F530-BB3E-4D42-B1C9-F64BEA0745A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F35A4CC-EA50-4599-A6F5-D9AE33D560D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F35A4CC-EA50-4599-A6F5-D9AE33D560D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F35A4CC-EA50-4599-A6F5-D9AE33D560D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F35A4CC-EA50-4599-A6F5-D9AE33D560D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
