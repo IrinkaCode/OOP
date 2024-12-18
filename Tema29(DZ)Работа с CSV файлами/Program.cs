@@ -63,9 +63,6 @@ CsvConfiguration(CultureInfo.InvariantCulture)
 };
 
 
-
-
-
 public class Person
 {
     [Name("UserName")]

@@ -31,11 +31,11 @@
             components = new System.ComponentModel.Container();
             contextMenuStrip1 = new ContextMenuStrip(components);
             dataGridViewInventors = new DataGridView();
-            statusStrip1 = new StatusStrip();
+            statusStrip = new StatusStrip();
             textBoxName = new TextBox();
             textBoxCount = new TextBox();
             textBoxPrice = new TextBox();
-            textBoxDescription = new TextBox();
+            textBoxDesc = new TextBox();
             menuStrip1 = new MenuStrip();
             файлToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
@@ -45,7 +45,12 @@
             выходToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
             buttonEdit = new Button();
+            contextMenuStrip2 = new ContextMenuStrip(components);
+            comboBoxFilter = new ComboBox();
+            textBoxSearch = new TextBox();
+            toolStripStatusLabelCount = new ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)dataGridViewInventors).BeginInit();
+            statusStrip.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,22 +63,23 @@
             // dataGridViewInventors
             // 
             dataGridViewInventors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewInventors.Location = new Point(12, 53);
+            dataGridViewInventors.Location = new Point(12, 141);
             dataGridViewInventors.Name = "dataGridViewInventors";
             dataGridViewInventors.RowHeadersWidth = 51;
-            dataGridViewInventors.Size = new Size(621, 459);
+            dataGridViewInventors.Size = new Size(621, 476);
             dataGridViewInventors.TabIndex = 1;
             dataGridViewInventors.CellClick += dataGridViewInventors_CellClick;
             dataGridViewInventors.KeyDown += dataGridViewInventors_KeyDown;
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Location = new Point(0, 531);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(982, 22);
-            statusStrip1.TabIndex = 2;
-            statusStrip1.Text = "statusStrip1";
+            statusStrip.ImageScalingSize = new Size(20, 20);
+            statusStrip.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelCount });
+            statusStrip.Location = new Point(0, 616);
+            statusStrip.Name = "statusStrip";
+            statusStrip.Size = new Size(992, 26);
+            statusStrip.TabIndex = 2;
+            statusStrip.Text = "statusStrip1";
             // 
             // textBoxName
             // 
@@ -100,22 +106,23 @@
             textBoxPrice.Size = new Size(280, 38);
             textBoxPrice.TabIndex = 5;
             // 
-            // textBoxDescription
+            // textBoxDesc
             // 
-            textBoxDescription.Location = new Point(672, 229);
-            textBoxDescription.Multiline = true;
-            textBoxDescription.Name = "textBoxDescription";
-            textBoxDescription.PlaceholderText = "Пояснение";
-            textBoxDescription.Size = new Size(280, 191);
-            textBoxDescription.TabIndex = 6;
+            textBoxDesc.Location = new Point(672, 229);
+            textBoxDesc.Multiline = true;
+            textBoxDesc.Name = "textBoxDesc";
+            textBoxDesc.PlaceholderText = "Пояснение";
+            textBoxDesc.Size = new Size(280, 324);
+            textBoxDesc.TabIndex = 6;
             // 
             // menuStrip1
             // 
+            menuStrip1.AutoSize = false;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(982, 28);
+            menuStrip1.Size = new Size(992, 50);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -124,7 +131,7 @@
             // 
             файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator1, сохранитьToolStripMenuItem, открытьToolStripMenuItem, toolStripSeparator2, выходToolStripMenuItem });
             файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            файлToolStripMenuItem.Size = new Size(59, 24);
+            файлToolStripMenuItem.Size = new Size(59, 46);
             файлToolStripMenuItem.Text = "Файл";
             // 
             // toolStripSeparator1
@@ -158,7 +165,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(672, 439);
+            button1.Location = new Point(672, 569);
             button1.Name = "button1";
             button1.Size = new Size(130, 48);
             button1.TabIndex = 8;
@@ -168,26 +175,59 @@
             // 
             // buttonEdit
             // 
-            buttonEdit.Location = new Point(815, 444);
+            buttonEdit.Location = new Point(808, 569);
             buttonEdit.Name = "buttonEdit";
-            buttonEdit.Size = new Size(137, 43);
+            buttonEdit.Size = new Size(137, 48);
             buttonEdit.TabIndex = 9;
             buttonEdit.Text = "Изменить";
             buttonEdit.UseVisualStyleBackColor = true;
             buttonEdit.Click += buttonEdit_Click;
             // 
+            // contextMenuStrip2
+            // 
+            contextMenuStrip2.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(61, 4);
+            // 
+            // comboBoxFilter
+            // 
+            comboBoxFilter.FormattingEnabled = true;
+            comboBoxFilter.Items.AddRange(new object[] { "Название", "Количество", "Цена" });
+            comboBoxFilter.Location = new Point(337, 74);
+            comboBoxFilter.Name = "comboBoxFilter";
+            comboBoxFilter.Size = new Size(296, 39);
+            comboBoxFilter.TabIndex = 10;
+            // 
+            // textBoxSearch
+            // 
+            textBoxSearch.Location = new Point(12, 74);
+            textBoxSearch.Name = "textBoxSearch";
+            textBoxSearch.PlaceholderText = "Введите строку для поиска";
+            textBoxSearch.Size = new Size(308, 38);
+            textBoxSearch.TabIndex = 11;
+            textBoxSearch.TextChanged += textBoxSearch_TextChanged;
+            // 
+            // toolStripStatusLabelCount
+            // 
+            toolStripStatusLabelCount.Name = "toolStripStatusLabelCount";
+            toolStripStatusLabelCount.Size = new Size(151, 20);
+            toolStripStatusLabelCount.Text = "toolStripStatusLabel1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 553);
+            AutoSize = true;
+            ClientSize = new Size(992, 642);
+            Controls.Add(textBoxSearch);
+            Controls.Add(comboBoxFilter);
             Controls.Add(buttonEdit);
             Controls.Add(button1);
-            Controls.Add(textBoxDescription);
+            Controls.Add(textBoxDesc);
             Controls.Add(textBoxPrice);
             Controls.Add(textBoxCount);
             Controls.Add(textBoxName);
-            Controls.Add(statusStrip1);
+            Controls.Add(statusStrip);
             Controls.Add(dataGridViewInventors);
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -197,6 +237,8 @@
             Text = "Урок 25";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewInventors).EndInit();
+            statusStrip.ResumeLayout(false);
+            statusStrip.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -207,11 +249,11 @@
 
         private ContextMenuStrip contextMenuStrip1;
         private DataGridView dataGridViewInventors;
-        private StatusStrip statusStrip1;
+        private StatusStrip statusStrip;
         private TextBox textBoxName;
         private TextBox textBoxCount;
         private TextBox textBoxPrice;
-        private TextBox textBoxDescription;
+        private TextBox textBoxDesc;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem файлToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
@@ -221,5 +263,9 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripMenuItem выходToolStripMenuItem;
         private Button buttonEdit;
+        private ContextMenuStrip contextMenuStrip2;
+        private ComboBox comboBoxFilter;
+        private TextBox textBoxSearch;
+        private ToolStripStatusLabel toolStripStatusLabelCount;
     }
 }
