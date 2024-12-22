@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema29(DZ)Работа с C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson29", "Lesson29\Lesson29.csproj", "{302E40BA-9DFF-4F59-A1D4-1154319CE112}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema30.2(DZ)Сериализ-я XML файлов", "Tema30.2(DZ)Сериализ-я XML файлов\Tema30.2(DZ)Сериализ-я XML файлов.csproj", "{76D1A0F7-549F-4AFB-82B4-49E71E26089E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -453,6 +455,10 @@ Global
 		{302E40BA-9DFF-4F59-A1D4-1154319CE112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{302E40BA-9DFF-4F59-A1D4-1154319CE112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{302E40BA-9DFF-4F59-A1D4-1154319CE112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D1A0F7-549F-4AFB-82B4-49E71E26089E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D1A0F7-549F-4AFB-82B4-49E71E26089E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D1A0F7-549F-4AFB-82B4-49E71E26089E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D1A0F7-549F-4AFB-82B4-49E71E26089E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
