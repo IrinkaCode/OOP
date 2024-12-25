@@ -13,19 +13,19 @@ namespace Lesson29
         public string? Name { get; set; }
 
         [DisplayName("Количество")]
-        public string? Quantity { get; set; }
+        public int Quantity { get; set; }
 
         [DisplayName("Стоимость")]
-        public string? Price { get; set; }
+        public decimal Price { get; set; }
 
         [DisplayName("ФИО поставщик")]
-        public string? Provaider { get; set; }
+        public string? Provider { get; set; }
 
         [DisplayName("ФИО получитель")]
         public string? Recipient { get; set; }
 
         [DisplayName("Дата оставки")]
-        public string? DateOrder { get; set; }
+        public DateTime DateOrder { get; set; }
 
         public int CompareTo(object? obj)
         {

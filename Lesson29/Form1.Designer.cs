@@ -34,6 +34,8 @@
             открытьToolStripMenuItem = new ToolStripMenuItem();
             выъодToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
+            сохранитьToolStripMenuItem = new ToolStripMenuItem();
+            buttonWord = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTovar).BeginInit();
             menuStrip2.SuspendLayout();
             SuspendLayout();
@@ -44,8 +46,9 @@
             dataGridViewTovar.Location = new Point(12, 58);
             dataGridViewTovar.Name = "dataGridViewTovar";
             dataGridViewTovar.RowHeadersWidth = 51;
-            dataGridViewTovar.Size = new Size(945, 511);
+            dataGridViewTovar.Size = new Size(945, 427);
             dataGridViewTovar.TabIndex = 1;
+            dataGridViewTovar.ColumnHeaderMouseClick += dataGridViewTovar_ColumnHeaderMouseClick_1;
             // 
             // menuStrip2
             // 
@@ -59,7 +62,7 @@
             // 
             // файлToolStripMenuItem
             // 
-            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { открытьToolStripMenuItem, выъодToolStripMenuItem, toolStripSeparator1 });
+            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { открытьToolStripMenuItem, выъодToolStripMenuItem, toolStripSeparator1, сохранитьToolStripMenuItem });
             файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             файлToolStripMenuItem.Size = new Size(59, 24);
             файлToolStripMenuItem.Text = "Файл";
@@ -67,26 +70,44 @@
             // открытьToolStripMenuItem
             // 
             открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            открытьToolStripMenuItem.Size = new Size(224, 26);
+            открытьToolStripMenuItem.Size = new Size(166, 26);
             открытьToolStripMenuItem.Text = "Открыть";
             открытьToolStripMenuItem.Click += открытьToolStripMenuItem_Click;
             // 
             // выъодToolStripMenuItem
             // 
             выъодToolStripMenuItem.Name = "выъодToolStripMenuItem";
-            выъодToolStripMenuItem.Size = new Size(224, 26);
+            выъодToolStripMenuItem.Size = new Size(166, 26);
             выъодToolStripMenuItem.Text = "Выход";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(221, 6);
+            toolStripSeparator1.Size = new Size(163, 6);
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            сохранитьToolStripMenuItem.Size = new Size(166, 26);
+            сохранитьToolStripMenuItem.Text = "Сохранить";
+            сохранитьToolStripMenuItem.Click += сохранитьToolStripMenuItem_Click;
+            // 
+            // buttonWord
+            // 
+            buttonWord.Location = new Point(24, 530);
+            buttonWord.Name = "buttonWord";
+            buttonWord.Size = new Size(130, 53);
+            buttonWord.TabIndex = 3;
+            buttonWord.Text = "ToWord";
+            buttonWord.UseVisualStyleBackColor = true;
+            buttonWord.Click += buttonWord_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(969, 612);
+            Controls.Add(buttonWord);
             Controls.Add(dataGridViewTovar);
             Controls.Add(menuStrip2);
             Name = "Form1";
@@ -105,5 +126,7 @@
         private ToolStripMenuItem открытьToolStripMenuItem;
         private ToolStripMenuItem выъодToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem сохранитьToolStripMenuItem;
+        private Button buttonWord;
     }
 }
