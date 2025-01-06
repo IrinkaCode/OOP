@@ -8,9 +8,9 @@ namespace Tema22_DZ__Практика
 {
     internal interface IUser
     {
-        public int Id { get; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
+        public int Id { set; }
+        public string Username { set; }
+        public string Password { set; }
+        public string Email { set; }
     }
 }
