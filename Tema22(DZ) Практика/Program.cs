@@ -10,7 +10,7 @@ while (running)
     Console.WriteLine("2. Выход");
     Console.WriteLine();
     string option = Console.ReadLine()!;
-
+    Console.WriteLine();
     switch (option)
     {
         case "1":
