@@ -159,6 +159,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema25(DZ)Практиче�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema22(DZ) Практика", "Tema22(DZ) Практика\Tema22(DZ) Практика.csproj", "{58E0E26C-E9A4-4B3D-9C67-4C68E5B3F705}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FallingSnowflakes", "FallingSnowflakes\FallingSnowflakes.csproj", "{9E6D2D8B-F7DF-4CC6-A020-47F32F6AEE30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -477,6 +479,10 @@ Global
 		{58E0E26C-E9A4-4B3D-9C67-4C68E5B3F705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E0E26C-E9A4-4B3D-9C67-4C68E5B3F705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E0E26C-E9A4-4B3D-9C67-4C68E5B3F705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6D2D8B-F7DF-4CC6-A020-47F32F6AEE30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6D2D8B-F7DF-4CC6-A020-47F32F6AEE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6D2D8B-F7DF-4CC6-A020-47F32F6AEE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6D2D8B-F7DF-4CC6-A020-47F32F6AEE30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
