@@ -169,6 +169,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema28.5(DZ)Работа с
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema28.5(DZ)DataGridView", "Tema28.5(DZ)DataGridView\Tema28.5(DZ)DataGridView.csproj", "{BED95C42-59CA-4C29-A50E-FEAC9660CB40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema28.6(DZ)Работа с источниками сетки.", "Tema28.6(DZ)Работа с источниками сетки\Tema28.6(DZ)Работа с источниками сетки..csproj", "{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -507,6 +509,10 @@ Global
 		{BED95C42-59CA-4C29-A50E-FEAC9660CB40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BED95C42-59CA-4C29-A50E-FEAC9660CB40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BED95C42-59CA-4C29-A50E-FEAC9660CB40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
