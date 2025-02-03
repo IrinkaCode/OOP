@@ -203,7 +203,7 @@ class Snowflake
 
 //        while (isRunning)
 //        {
-//            playerSnowflake.Fall(1); 
+//            playerSnowflake.Fall(1);
 //            if (playerSnowflake.Y >= screenHeight)
 //            {
 //                playerSnowflake.ResetPosition(screenWidth);
