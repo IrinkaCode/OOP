@@ -171,6 +171,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema28.5(DZ)DataGridView", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema28.6(DZ)Работа с источниками сетки.", "Tema28.6(DZ)Работа с источниками сетки\Tema28.6(DZ)Работа с источниками сетки..csproj", "{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson35 LINQ", "Lesson35 LINQ\Lesson35 LINQ.csproj", "{A61A89A9-7BA5-4D80-8310-C0201F05BD78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema35-1(DZ)Введ-е в LINQ", "Tema35-1(DZ)Введ-е в LINQ\Tema35-1(DZ)Введ-е в LINQ.csproj", "{E2EAECAB-9B65-467A-83F2-FF21B593C34D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -513,6 +517,14 @@ Global
 		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A32E8D7C-5E10-42BE-AFBD-F1F4BCE94472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61A89A9-7BA5-4D80-8310-C0201F05BD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61A89A9-7BA5-4D80-8310-C0201F05BD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61A89A9-7BA5-4D80-8310-C0201F05BD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61A89A9-7BA5-4D80-8310-C0201F05BD78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EAECAB-9B65-467A-83F2-FF21B593C34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EAECAB-9B65-467A-83F2-FF21B593C34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EAECAB-9B65-467A-83F2-FF21B593C34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EAECAB-9B65-467A-83F2-FF21B593C34D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
