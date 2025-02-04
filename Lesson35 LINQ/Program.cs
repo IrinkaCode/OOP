@@ -1,6 +1,4 @@
 ﻿//LINQ
-
-
 using System.Linq;
 
 List<Car>GetCars()
@@ -46,8 +44,6 @@ foreach (var car in zip)
 {
     Console.WriteLine(car);
 }
-
-
 
 
 class Car
