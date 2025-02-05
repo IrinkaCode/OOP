@@ -20,30 +20,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 
-//var filePath = Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json");
-//if (!File.Exists(filePath))
-//{
-//Console.WriteLine("Файл appsettings.json не найден.");
-//}
-//else
-//{
-//var configuration = new ConfigurationBuilder()
-//    .SetBasePath(Directory.GetCurrentDirectory())
-//    .AddJsonFile("appsettings.json")
-//    .Build();
-//}
-
-//try
-//{
-//    var configuration = new ConfigurationBuilder()
-//        .SetBasePath(Directory.GetCurrentDirectory())
-//        .AddJsonFile("appsettings.json")
-//        .Build();
-//}
-//catch (Exception ex)
-//{
-//    Console.WriteLine($"Ошибка при загрузке конфигурации: {ex.Message}");
-//}
 
 IConfigurationRoot configuration = new ConfigurationBuilder()
 .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("jsconfig1.json").Build();
