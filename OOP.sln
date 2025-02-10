@@ -181,6 +181,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema34-4(DZ)Логиров�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson36", "Lesson36\Lesson36.csproj", "{4BA95FAD-ABE2-4D09-B42E-5F044DFC2CEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson37", "Lesson37\Lesson37.csproj", "{ADC840A8-7C60-479B-B131-CDB50C25378B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -543,6 +545,10 @@ Global
 		{4BA95FAD-ABE2-4D09-B42E-5F044DFC2CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BA95FAD-ABE2-4D09-B42E-5F044DFC2CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BA95FAD-ABE2-4D09-B42E-5F044DFC2CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC840A8-7C60-479B-B131-CDB50C25378B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC840A8-7C60-479B-B131-CDB50C25378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC840A8-7C60-479B-B131-CDB50C25378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC840A8-7C60-479B-B131-CDB50C25378B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
