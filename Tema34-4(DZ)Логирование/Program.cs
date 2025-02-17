@@ -14,38 +14,44 @@
 
 using System;
 using System.IO;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
 
+// Загрузка конфигурации из appsettings.json
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .Build();
 
+// Настройка логгера
+var loggerFactory = LoggerFactory.Create(builder =>
+{
+    builder
+        .AddConfiguration(configuration.GetSection("Logging"))
+        .AddConsole()
+        .AddFile(configuration["Logging:FileDebug:Path"], minimumLevel: LogLevel.Debug)
+        .AddFile(configuration["Logging:FileError:Path"], minimumLevel: LogLevel.Error);
+});
 
-IConfigurationRoot configuration = new ConfigurationBuilder()
-.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("jsconfig1.json").Build();
+ILogger logger = loggerFactory.CreateLogger<Program>();
 
-var serviceProvider = new ServiceCollection()
-    .AddDbContext<ShopContext>(options => options.EnableServiceProviderCaching())
+// Получение строки подключения
+string connectionString = configuration.GetConnectionString("DefaultConnection");
 
-    //UseSqlServer(configuration.GetConnectionString("DefaultConnection")))
-
-    .AddLogging(builder =>
+// Подключение к базе данных
+using (var connection = new MySqlConnection(connectionString))
+{
+    try
     {
-        builder.AddFilter(configuration["Logging:FileLogging:DebugLogPath"], LogLevel.Debug);
-        builder.AddFilter(configuration["Logging:FileLogging:ErrorLogPath"], LogLevel.Error);
-    })
-    .BuildServiceProvider();
+        connection.Open();
+        logger.LogInformation("Подключение к базе данных успешно установлено.");
 
-using (var context = serviceProvider.GetService<ShopContext>())
-{
-    var logger = serviceProvider.GetService<ILogger<Program>>();
-    logger.LogInformation("Приложение запущено.");
-
-}
-
-public class ShopContext : DbContext
-{
-    public ShopContext(DbContextOptions<ShopContext> options) : base(options) { }
+    }
+    catch (Exception ex)
+    {
+        logger.LogError($"Ошибка при подключении к базе данных: {ex.Message}");
+    }
 }
 
 
