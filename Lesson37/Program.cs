@@ -1,11 +1,12 @@
-﻿// Консольный мавгазин 2
+﻿// Консольный магазин 2
+
 using System.Security.Authentication;
 
 List<Person> persons = new List<Person>()
 {
-    new Person(){Id=1, Name="Иван"},
-    new Person(){Id=2,Name="Борис"},
-    new Person(){Id=3,Name="Федор"}
+    new Person(){Id=1, Name="Иван",Age=35},
+    new Person(){Id=2,Name="Борис",Age=24},
+    new Person(){Id=3,Name="Федор",Age=44}
 };
 
 List<Product> priceList = new List<Product>
@@ -23,6 +24,8 @@ List<Product> priceList = new List<Product>
 
 Console.Write("Введите ваше имя:");
 string name = Console.ReadLine()!;
+
+
 Console.Write("Введите ваш баланс:");
 decimal balance = decimal.Parse(Console.ReadLine()!);
 Person person = persons.FirstOrDefault(p => p.Name == name)!;
@@ -46,7 +49,7 @@ Dictionary<int,int> calendar = new Dictionary<int,int>()
         {9 , 1},
         {10 , 12},
         {11 , 21},
-        {31, 12},
+        {12, 31},
 };
 
 
@@ -54,6 +57,7 @@ if (person == null)
     Console.WriteLine("Такого пользователя нет!");
 else
 {
+  
     person.Balance = balance;
     decimal Startbalance = balance;
     SalePerson salePerson = new SalePerson();
@@ -62,6 +66,8 @@ else
     do
     {
         Console.Clear();
+        Console.Write("Введите ваше имя: " + person.Name);
+        Console.Write("Введите ваш возраст: " + person.Age);
         Console.WriteLine("Сегодня:" + dateSale);
         Console.WriteLine($"Ваш баланс:{person.Balance}");
 
@@ -69,7 +75,10 @@ else
 
         foreach (var item in priceList)
         {
-            discount = (calendar.ContainsValue(dateSale.Day) && calendar.ContainsValue(dateSale.Month)) ? 0.2M : 0;
+            foreach (var cal in calendar)
+            {
+                discount = (cal.Value==dateSale.Day && cal.Key==dateSale.Month) ? 0.2M : 0;
+            }
             if (Startbalance - person.Balance > 50000)
             {
                 discount = discount + 0.1M;
@@ -78,6 +87,8 @@ else
             {
                 discount = discount + 0.05M;
             }
+
+ 
             if (item.Discount == 0)
                 Console.WriteLine($"Id:{item.Id}. Name:{item.Name} Type:{item.ProductType}" +
                     $" Price:{item.Price - item.Price * discount}");
@@ -85,6 +96,12 @@ else
             {
                 if(calendar.ContainsValue(dateSale.Day) && calendar.ContainsKey(dateSale.Month)==false)
                 Console.WriteLine($"Id:{item.Id}. Name:{item.Name} Type:{item.ProductType}" + $" Price:{item.Price - item.Price * item.Discount}");
+
+                else if (item.Name == "Water" && person.Age > 30)
+                {
+                    Console.WriteLine($"Id:{item.Id}. Name:{item.Name} Type:{item.ProductType}" +
+                        $" Price:{item.Price - item.Price * discount + 0.25M}");
+                }
                 else Console.WriteLine($"Id:{item.Id}. Name:{item.Name} Type:{item.ProductType}" + $" Price:{item.Price - item.Price * (item.Discount+0.2M)}");
             }
 
@@ -128,6 +145,7 @@ else
     }
     while (true);
 }
+
 enum TypeOfProduct
 {
     MotherBoard,
