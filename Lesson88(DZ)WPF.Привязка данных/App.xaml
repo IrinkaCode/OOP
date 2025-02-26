@@ -1,0 +1,9 @@
+﻿<Application x:Class="Lesson88_DZ_WPF.Привязка_данных.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Lesson88_DZ_WPF.Привязка_данных"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
