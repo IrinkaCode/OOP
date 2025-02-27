@@ -5,14 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lesson88_DZ_WPF.Привязка_данных"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="530">
+        Title="MainWindow" Height="350" Width="400" Background="Orange">
+    <Window.Resources>
+        <!-- Стиль для TextBox с скругленными углами -->
+        <Style x:Key="RoundedTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="10" Background="White" BorderBrush="Gray" BorderThickness="1">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Padding" Value="5" />
+        </Style>
+        <!-- Стиль для кнопки с скругленными углами -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="LightBlue" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+    </Window.Resources>
+    
+
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
-    <StackPanel Margin="20">
-        <TextBox Text="{Binding Person.FirstName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
-        <TextBox Text="{Binding Person.LastName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
-        <TextBox Text="{Binding Person.Age, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
-        <Button Content="Получить данные" Command="{Binding GetDataCommand}" />
+    <StackPanel Margin="20" >
+        <TextBlock Text="Имя:" FontSize="16" Margin="0,0,0,5" />
+        <TextBox Style="{StaticResource RoundedTextBoxStyle}" Text="{Binding Person.FirstName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" Height="40" />
+
+        <TextBlock Text="Фамилия:" FontSize="16" Margin="0,0,0,5" />
+        <TextBox Style="{StaticResource RoundedTextBoxStyle}" Text="{Binding Person.LastName, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" Height="40" />
+
+        <TextBlock Text="Возраст:" FontSize="16" Margin="0,0,0,5" />
+        <TextBox Style="{StaticResource RoundedTextBoxStyle}" Text="{Binding Person.Age, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,20" Height="40" />
+        <Button  Content="Получить данные" Command="{Binding GetDataCommand}" Height="56" Width="226" Background="LightGreen" Style="{StaticResource RoundedButtonStyle}"/>
     </StackPanel>
 </Window>

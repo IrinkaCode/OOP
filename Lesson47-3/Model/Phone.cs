@@ -41,6 +41,12 @@ namespace Lesson47_3
             }
         }
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        internal static void RemoveAt(int index)
+        {
+            throw new NotImplementedException();
+        }
+
         public void OnProperyChanged([CallerMemberName] string prop = "")
         {
             if(PropertyChanged !=null)
