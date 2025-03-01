@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "server=localhost;database=OnlineShop;user=root;password=000000;"
+  }
+}

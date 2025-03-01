@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,25 +31,48 @@ public class OnlineShopContext : DbContext
             Console.WriteLine($"Ошибка при работе с базой данных: {ex.Message}");
         }
     }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("jsconfig.json")
+                .Build();
 
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            optionsBuilder.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 23)));
+        }
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Настройка связи между Product и Category
-        modelBuilder.Entity<Product>()
-            .HasOne(p => p.Category)
-            .WithMany()
-            .HasForeignKey(p => p.CategoryId);
-
-        // Настройка связи между Order и User
-        modelBuilder.Entity<Order>()
-            .HasOne(o => o.User)
-            .WithMany(u => u.Orders)
-            .HasForeignKey(o => o.UserId);
-
-        // Настройка связи между Order и Product (многие ко многим)
-        modelBuilder.Entity<Order>()
-            .HasMany(o => o.Products)
-            .WithMany()
-            .UsingEntity(j => j.ToTable("OrderProducts"));
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.UserId);
+            entity.Property(e => e.Username).HasMaxLength(25).IsRequired();
+            entity.Property(e => e.Email).HasMaxLength(25).IsRequired();
+            entity.Property(e => e.Password).HasMaxLength(25).IsRequired();
+        });
     }
+
+    //protected override void OnModelCreating(ModelBuilder modelBuilder)
+    //{
+    //    // Настройка связи между Product и Category
+    //    modelBuilder.Entity<Product>()
+    //        .HasOne(p => p.Category)
+    //        .WithMany()
+    //        .HasForeignKey(p => p.CategoryId);
+
+    //    // Настройка связи между Order и User
+    //    modelBuilder.Entity<Order>()
+    //        .HasOne(o => o.User)
+    //        .WithMany(u => u.Orders)
+    //        .HasForeignKey(o => o.UserId);
+
+    //    // Настройка связи между Order и Product (многие ко многим)
+    //    modelBuilder.Entity<Order>()
+    //        .HasMany(o => o.Products)
+    //        .WithMany()
+    //        .UsingEntity(j => j.ToTable("OrderProducts"));
+    //}
 }

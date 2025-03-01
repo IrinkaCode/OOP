@@ -1,9 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Tema34_2_DZ_Cоздание_модели;
 using Tema34_2_DZ_Cоздание_модели.Entities;
 
+// Чтение конфигурации из JSON-файла
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("jsconfig.json")
+    .Build();
+
+var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+
+// Настройка контекста базы данных
 var optionsBuilder = new DbContextOptionsBuilder<OnlineShopContext>();
 optionsBuilder.UseMySql("server=localhost;database=OnlineShop;user=root;password=000000;", new MySqlServerVersion(new Version(8, 0, 23)));
+
 
 using (var context = new OnlineShopContext(optionsBuilder.Options))
 {
@@ -46,7 +58,26 @@ using (var context = new OnlineShopContext(optionsBuilder.Options))
     user2.Orders.Add(order2);
 
     context.SaveChanges();
-}
 
-Console.WriteLine("База данных успешно создана и заполнена!");
+    // Добавление пользователей
+    context.Users.AddRange(
+        new User { Username = "User3", Email = "user3@example.com", Password = "password1" },
+        new User { Username = "User4", Email = "user4@example.com", Password = "password2" },
+        new User { Username = "User5", Email = "user5@example.com", Password = "password3" },
+        new User { Username = "User6", Email = "user6@example.com", Password = "password4" }
+    );
+
+    // Сохранение изменений
+    context.SaveChanges();
+    Console.WriteLine("Пользователи добавлены в базу данных!");
+
+// Вывод данных из таблицы Users
+var users = context.Users.ToList();
+    foreach (var user in users)
+    {
+        Console.WriteLine($"UserId: {user.UserId}, Username: {user.Username}, Email: {user.Email}, Password: {user.Password}");
+    }
+
+    Console.WriteLine("База данных успешно создана и заполнена!");
+}
         
