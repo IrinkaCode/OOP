@@ -10,7 +10,7 @@ namespace Lesson88_DZ_WPF.Привязка_данных
 {
     public class DataService
     {
-        private string connectionString = "Data Source=Dz88.db;Version=3;";
+        private string connectionString = "Data Source=C:\\SqLite\\Dz88.db;Version=3;";
 
         public Person? GetFirstPerson()
         {

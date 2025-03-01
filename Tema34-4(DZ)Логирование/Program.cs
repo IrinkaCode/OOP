@@ -43,27 +43,11 @@ string connectionString = $"Server={config["Database:169.254.120.188"]};" +
                           $"User ID={config["Database:internet-shop-admin"]};" +
                           $"Password={config["Database:000000"]};";
 
-//Подключение к базе данных
-//using (var connection = new MySqlConnection(connectionString))
-//{
-//    try
-//    {
-//        connection.Open();
-//        logger.LogInformation("Подключение к базе данных успешно установлено.");
-
-//    }
-//    catch (Exception ex)
-//    {
-//        logger.LogError($"Ошибка при подключении к базе данных: {ex.Message}");
-//    }
-//}
-
 try
 {
     using var connection = new MySqlConnection(connectionString);
     connection.Open();
     logger.LogDebug("Успешное подключение к базе данных");
-
 }
 catch (MySqlException ex)
 {
