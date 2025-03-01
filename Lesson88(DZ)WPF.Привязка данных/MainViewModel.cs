@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Lesson88_DZ_WPF.Привязка_данных;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Lesson88_DZ_WPF.Привязка_данных
@@ -41,3 +37,4 @@ namespace Lesson88_DZ_WPF.Привязка_данных
         }
     }
 }
+

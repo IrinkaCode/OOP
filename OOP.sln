@@ -231,6 +231,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson47-3", "Lesson47-3\Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson88(DZ)WPF.Привязка данных", "Lesson88(DZ)WPF.Привязка данных\Lesson88(DZ)WPF.Привязка данных.csproj", "{4D28DD98-CDC4-487F-B262-8C7607B2895D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson48", "Lesson48\Lesson48.csproj", "{E478F548-2436-41EB-BEC1-6055AA0A111E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema34-2(DZ)Cоздание модели", "Tema34-2(DZ)Cоздание модели\Tema34-2(DZ)Cоздание модели.csproj", "{E27BC35F-7E79-41DA-9679-DEB6F9235AC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -693,6 +697,14 @@ Global
 		{4D28DD98-CDC4-487F-B262-8C7607B2895D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D28DD98-CDC4-487F-B262-8C7607B2895D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D28DD98-CDC4-487F-B262-8C7607B2895D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E478F548-2436-41EB-BEC1-6055AA0A111E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E478F548-2436-41EB-BEC1-6055AA0A111E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E478F548-2436-41EB-BEC1-6055AA0A111E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E478F548-2436-41EB-BEC1-6055AA0A111E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E27BC35F-7E79-41DA-9679-DEB6F9235AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27BC35F-7E79-41DA-9679-DEB6F9235AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27BC35F-7E79-41DA-9679-DEB6F9235AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27BC35F-7E79-41DA-9679-DEB6F9235AC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
