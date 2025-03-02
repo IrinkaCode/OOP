@@ -18,6 +18,8 @@ using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 
+Directory.SetCurrentDirectory(AppContext.BaseDirectory);
+
 // Загрузка конфигурации из JSON-файла
 var config = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
@@ -31,6 +33,7 @@ using var loggerFactory = LoggerFactory.Create(builder =>
         .AddFilter("Microsoft", LogLevel.Warning)
         .AddFilter("System", LogLevel.Warning)
         .AddFilter("InternetShop", LogLevel.Debug)
+        .AddConsole()
         .AddFilter("debug.log", LogLevel.Debug)
         .AddFilter("errors.log", LogLevel.Error);
 });
@@ -57,3 +60,5 @@ catch (Exception ex)
 {
     logger.LogError($"Неизвестная ошибка: {ex.Message}");
 }
+
+
